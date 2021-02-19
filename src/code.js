@@ -40,18 +40,18 @@
 // console.log(add())
 // //Variables outside the function are available inside the function due to lexical scoping.
 
-// var addTo = function(passed) {
-//
-//   var add = function(inner) {
-//     return passed + inner
-//   }
-//
-//   return add;
-// }
-//
-// var addThree = new addTo(3);
-// console.log(addThree) //this logs a function! once you pass it an argument, it will execute:
-// console.log(addThree(1));
+var addTo = function(passed) {
+
+  var add = function(inner) {
+    return passed + inner
+  }
+
+  return add;
+}
+
+var addThree = new addTo(3);
+console.log(addThree) //this logs a function! once you pass it an argument, it will execute:
+console.log(addThree(1));
 
 //Recursive Functions
 //1. a recursive function calls itself.
