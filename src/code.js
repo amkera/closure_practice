@@ -40,15 +40,32 @@
 // console.log(add())
 // //Variables outside the function are available inside the function due to lexical scoping.
 
-var addTo = function(passed) {
+// var addTo = function(passed) {
+//
+//   var add = function(inner) {
+//     return passed + inner
+//   }
+//
+//   return add;
+// }
+//
+// var addThree = new addTo(3);
+// console.log(addThree) //this logs a function! once you pass it an argument, it will execute:
+// console.log(addThree(1));
 
-  var add = function(inner) {
-    return passed + inner
+//Recursive Functions
+//1. a recursive function calls itself.
+//2. A recursive function has 2 main parts (1, a terminating condition, and 2, the recursive case (portion of the function that calls itself))
+
+//Factorial problem
+
+
+let factorial = function fac(num) {
+  if (num === 1) {
+    return 1;
   }
-
-  return add;
+  return num * fac(num - 1);
 }
 
-var addThree = new addTo(3);
-console.log(addThree) //this logs a function! once you pass it an argument, it will execute:
-console.log(addThree(1));
+let final = factorial(5);
+console.log(final)
