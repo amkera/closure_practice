@@ -4,4 +4,4 @@ function printName() {
   console.log(myName)
 }
 
-printName();
+printName()
